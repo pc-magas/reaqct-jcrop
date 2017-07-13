@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import JCrop from './JCrop.js';
+import JCrop from './jCrop/JCrop.js';
 
 class App extends Component {
   render() {
@@ -12,9 +12,12 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
-        <p className="App-intro">
-            <JCrop imageToCrop= { 'https://pbs.twimg.com/media/C3Gjn9_UMAAdHEr.jpg' } />
-        </p>
+        <div className="App-into">
+          <JCrop 
+            imageToCrop= { 'https://pbs.twimg.com/media/C3Gjn9_UMAAdHEr.jpg' }
+            updateCropArea = { (x,y,w,h)=> { console.log("Parent: ",x,y,w,h) } } 
+          />
+        </div>
       </div>
     );
   }
