@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import $ from 'jquery';
+import $ from './MyJquery.js';
 import Jcrop from 'jcrop';
+
 
 class JCrop extends Component {
 
@@ -13,12 +14,12 @@ class JCrop extends Component {
     }
 
     comonentWillMount() {
-        $(this.imageHtmlElement).Jcrop();
+        $.Jcrop("#img");
     }
 
     render(){
         return(
-            <img rel={ (rel) => {this.setState({imageHtmlElement:rel})} } src={ this.state.imageToCrop } />
+            <img id="img" rel={ (rel) => {this.setState({imageHtmlElement:rel})} } src={ this.state.imageToCrop } />
         )
     }
 }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import './JCrop.js';
+import JCrop from './JCrop.js';
 
 class App extends Component {
   render() {
