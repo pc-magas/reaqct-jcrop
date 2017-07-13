@@ -1,0 +1,22 @@
+.selector {
+    cursor: pointer;
+    display: inline;
+    margin: 3px;
+}
+.selector:hover{
+    /* Change the behaviour of the selector */
+    color: blue;
+}
+
+.selectorArea {
+    width: 100%;
+}
+
+.imgArea {
+    width: 100%;
+}
+
+.imgArea img {
+    display: block;
+    margin: 0 auto;
+}
